@@ -11,6 +11,8 @@ import {
 import toast, { Toaster } from 'react-hot-toast';
 import emailjs from "@emailjs/browser";
 
+const api = 'https://nano-fk4q.onrender.com'
+
 const sites = [
   {
     title: "E-Commerce",
@@ -24,8 +26,8 @@ const sites = [
   },
   {
     title: "Landing page",
-    image: "/ghost.png",
-    url: "/"
+    image: api+"/ghost.png",
+    url: api+"/"
   }
 ];
 
@@ -38,8 +40,6 @@ const carouselImages = [
   "/3.png",
   "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800"
 ];
-
-const api = ''
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -113,7 +113,7 @@ function App() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               {/* <Code2 className="h-8 w-8 text-purple-500" /> */}
-              <img src="/ghost.png" alt="" className='w-8 h-8' />
+              <img src={api+"/ghost.png"} alt="" className='w-8 h-8' />
               <span className="ml-2 text-xl font-bold font-mono">Nano</span>
             </div>
 
